@@ -1,0 +1,16 @@
+{
+  "name": "skynet-relay-cloud",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SKYNET Relay v0.1: Cloudflare Worker + Durable Object bridge between ChatGPT MCP endpoint and local Windows agent MCP server.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260701.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.23.0"
+  }
+}

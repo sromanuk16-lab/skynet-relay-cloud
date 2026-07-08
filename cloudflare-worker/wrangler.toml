@@ -1,0 +1,18 @@
+name = "skynet-relay-cloud"
+main = "src/index.ts"
+compatibility_date = "2026-07-08"
+
+# v0.1: one-user / one-device relay.
+# Later we will replace PUBLIC_TOKEN / AGENT_TOKEN with accounts + signed device tokens + D1.
+[vars]
+DEVICE_ID = "sergey-pc"
+PUBLIC_TOKEN = "CHANGE_ME_PUBLIC_RANDOM_TOKEN"
+REQUEST_TIMEOUT_MS = "60000"
+
+[[durable_objects.bindings]]
+name = "DEVICE_SESSIONS"
+class_name = "DeviceSession"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["DeviceSession"]
